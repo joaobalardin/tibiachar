@@ -1,0 +1,16 @@
+.btn-detalhes{
+    background-color: #614ea6;
+    color: #fff;
+}
+
+.btn-detalhes:hover{
+    color: #fff;
+}
+
+.card-text{
+    max-height: 30px;
+    min-height: 20px;
+    overflow: hidden;
+}
+
+

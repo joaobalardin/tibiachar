@@ -1,0 +1,31 @@
+.login-content{
+    width: 100;
+    padding: 15%;
+    margin: auto;
+    height: 100vh;
+    background-image: url(https://static.tibia.com/images/global/header/background-artwork.jpg);
+}
+
+.btn-login{
+    background-color: #fff;
+    color: #614ea6;
+    margin: auto;
+}
+
+.btn-login:hover{
+    background-color: #f21667;
+    color: #fff;
+}
+
+.opcoes-login a{
+    text-decoration: none;
+    color: #fff;
+    transition: .3s ease-in;
+    
+}
+
+.opcoes-login a:hover{
+    text-decoration: none;
+    color: #f21667;
+    
+}

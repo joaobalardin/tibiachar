@@ -1,0 +1,19 @@
+.form-login{
+    max-width: 650px;
+}
+
+.btn-cadastro{
+    background-color: #614EA6;
+    color: #fff;
+    margin: auto;
+}
+
+.btn-cadastro:hover{
+    background-color: #F21667;
+    color: #fff;
+}
+
+.cadastro-content{
+    height: 100vh;
+    background-image: url(https://static.tibia.com/images/global/header/background-artwork.jpg);
+}
