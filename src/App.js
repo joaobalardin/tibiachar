@@ -12,7 +12,7 @@ import UsuarioRecuperarSenha from './view/usuario-recuperar-senha/';
 import MundoCadastro from './view/world-cadastro/';
 import WorldDetalhes from './view/world-detalhes/';
 import CharCadastro from './view/chars-cadastro/';
-//import CharDetalhes from './view/chars-detalhes/';
+import CharDetalhes from './view/char-detalhes/';
 
 function App() {
   return (
@@ -27,7 +27,8 @@ function App() {
         <Route path='/editarworld/:id' component={MundoCadastro} />
         <Route path='/worlddetalhes/:id' component={WorldDetalhes} />
         <Route exact path='/charcadastro' component={CharCadastro} />
-        <Route path='/charcadastro/:id' component={CharCadastro} />
+        <Route path='/editarchar/:id' component={CharCadastro} />
+        <Route path='/chardetalhes/:mundoid/:id' component={CharDetalhes} />
 
       </Router>
       </PersistGate>

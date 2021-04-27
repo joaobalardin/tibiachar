@@ -50,8 +50,7 @@ function WorldDetalhes(props) {
         });
         setPesquisa(texto)
     }
-
-    console.log(chars);
+    
     return (
         <>
         <Navbar />
@@ -65,7 +64,7 @@ function WorldDetalhes(props) {
         <div className="row p-12">
             <h3>Lista de Chars:</h3>
             {
-                chars.map((item) => (<CharCard key={item.id} id={item.id} chars={item.char} level={item.level} tipo={item.tipo} skill={item.skill} />))
+                chars.map((item) => (<CharCard key={item.id} id={item.id} chars={item.char} level={item.level} tipo={item.tipo} skill={item.skill} world={item.world} />))
             }
         </div>
 

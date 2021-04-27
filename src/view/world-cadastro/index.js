@@ -21,7 +21,7 @@ function MundoCadastro(props){
     useEffect(() => {  
         if(props.match.params.id){                   
             firebase.firestore().collection('worlds').doc(props.match.params.id).get().then(resultado => {
-                setWorld(resultado.data().worlds)       
+                setWorld(resultado.data().world)       
                 setTipo(resultado.data().tipo)                                                                                           
     })
     }
@@ -32,7 +32,7 @@ function MundoCadastro(props){
         setCarregando(1);
         if(!props.match.params.id){
             db.collection('worlds').add({
-                worlds: data.nome_world,
+                world: data.nome_world,
                 tipo: data.tipo_world,
                 usuario: usuarioEmail,
                 publico: 1,
@@ -45,8 +45,8 @@ function MundoCadastro(props){
                 setCarregando(0);
             });
         }else{
-            db.collection('worlds').update({
-                worlds: data.nome_world,
+            db.collection('worlds').doc(props.match.params.id).update({
+                world: data.nome_world,
                 tipo: data.tipo_world,
                 usuario: usuarioEmail,
                 publico: 1,
@@ -84,9 +84,9 @@ function MundoCadastro(props){
                     <label>Tipo de Mundo:</label>
                     <select {...register('tipo_world')} className="form-control">
                         <option disabled selected value>-- Selecione uma opção --</option>
-                        <option value={'optPvP'}>PvP-Opcional</option>
-                        <option value={'pve'}>PvE</option>
-                        <option value={'retroPvP'}>Retro-PvP</option>
+                        <option value={'PvP-Opcional'}>PvP-Opcional</option>
+                        <option value={'PvE'}>PvE</option>
+                        <option value={'Retro-PvP'}>Retro-PvP</option>
                     </select>                    
                 </div>
 

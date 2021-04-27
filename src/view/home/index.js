@@ -17,14 +17,11 @@ function Home(props){
 
     useEffect(() => {
         firebase.firestore().collection('worlds').get().then(async (resultado) => {
-            await resultado.docs.forEach(doc => {
-               if(doc.data().world.indexOf(pesquisa) >= 0)
-               {                   
+            await resultado.docs.forEach(doc => {    
                 listamundos.push({
                    id: doc.id,
                    ...doc.data()
                })
-               }
            })
            setWorlds(listamundos);
         });

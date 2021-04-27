@@ -96,7 +96,7 @@ function CharCadastro(props){
             <form onSubmit={handleSubmit(onSubmit)}>
             
             <div className="row p-3 ">
-                <h2 className="mx-auto p-5">Mundos Criados</h2>
+                <h2 className="mx-auto p-5">Chars Criados</h2>
                 <select {...register('world')} className="form-control">
                 <option disabled selected value>-- Selecione uma opção --</option>
                     {worlds && worlds.map(world => {
