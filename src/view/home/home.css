@@ -1,4 +1,33 @@
 .row-nav{
     color: #222;
 }
+ 
+body{
+    background-image: url(https://static.tibia.com/images/global/header/background-artwork.jpg);
+}
 
+.Talles-Responsividade {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Corner-tl {
+    background-image:url(https://static.tibia.com/images/global/content/corner-tl.gif);
+}
+
+.Corner-tr {
+    background-image:url(https://static.tibia.com/images/global/content/corner-tr.gif);
+}
+
+.Border_1 {
+    background-image:url(https://static.tibia.com/images/global/content/border-1.gif);
+}
+
+.BorderTitleText {
+    background-image:url(https://static.tibia.com/images/global/content/title-background-green.gif);
+}
+
+.BoxContent {
+    background-image:url(https://static.tibia.com/images/global/content/scroll.gif);
+}

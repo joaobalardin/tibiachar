@@ -11,3 +11,57 @@
 .nav-item a:hover{
     color: #F21667;
 }
+/* as */
+ 
+body{
+    background-image: url(https://static.tibia.com/images/global/header/background-artwork.jpg);
+}
+
+.Talles-ResponsividadeNav {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.Corner-tl {
+    background-image:url(https://static.tibia.com/images/global/content/corner-tl.gif);
+}
+
+.Corner-tr {
+    background-image:url(https://static.tibia.com/images/global/content/corner-tr.gif);
+}
+
+.Border_1 {
+    background-image:url(https://static.tibia.com/images/global/content/border-1.gif);
+}
+
+.BorderTitleTextNav {
+    background-image:url(https://static.tibia.com/images/global/content/newsheadline_background.gif);
+}
+
+.BoxContent {
+    background-image:url(https://static.tibia.com/images/global/content/scroll.gif);
+}
+
+.Corner-bl {
+    background-image:url(https://static.tibia.com/images/global/content/corner-bl.gif);
+}
+
+.Corner-br {
+    background-image:url(https://static.tibia.com/images/global/content/corner-br.gif);
+}
+
+.navJustf {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 28px;
+}
+
+.linkDecoration{
+    text-decoration: none !important;
+    font-size: 10pt !important;
+    color: #fff2db !important;
+    font-family: Arial, Times New Roman, sans-serif !important;
+}

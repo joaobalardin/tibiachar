@@ -66,44 +66,77 @@ function MundoCadastro(props){
     return(
         <>
         <Navbar/>
-        <div className="col-12 mt-5">
+            <div className="main-content Content Talles-Responsividade">
+                <div id="characters" className="Box">
 
-            <div className="row-nav">
-                <h3 className="mx-auto font-weight-bold">{props.match.params.id ? 'Atualizar Mundo' : 'Novo Mundo'}</h3>
-            </div>
+                    <div className="Corner-tl" ></div>
 
-            <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className="Corner-tr" ></div>
+
+                    <div className="Border_1"></div>
+
+                    <div className="BorderTitleText">
+                    </div>
+
+                    <img id="ContentBoxHeadline" className="Title" src="https://static.tibia.com/images/global/strings/headline-worlds.gif" alt="Contentbox headline">
+                    </img>
+
+                    <div className="Border_2">
+                        <div className="Border_3">
+                            <div className="BoxContent">
+                                <div className="col-12 mt-5">
+
+                                    <div className="row-nav">
+                                        <h3 className="mx-auto font-weight-bold">{props.match.params.id ? 'Atualizar Mundo' : 'Novo Mundo'}</h3>
+                                    </div>
+
+                                    <form onSubmit={handleSubmit(onSubmit)}>
 
 
-                <div className="form-group">
-                    <label>Mundo:</label>
-                    <input {...register('nome_world')} type="text" className="form-control" />
-                </div>
+                                        <div className="form-group">
+                                            <label>Mundo:</label>
+                                            <input {...register('nome_world')} type="text" className="form-control" />
+                                        </div>
 
-                <div className="form-group">
-                    <label>Tipo de Mundo:</label>
-                    <select {...register('tipo_world')} className="form-control">
-                        <option disabled selected value>-- Selecione uma opção --</option>
-                        <option value={'PvP-Opcional'}>PvP-Opcional</option>
-                        <option value={'PvE'}>PvE</option>
-                        <option value={'Retro-PvP'}>Retro-PvP</option>
-                    </select>                    
-                </div>
+                                        <div className="form-group">
+                                            <label>Tipo de Mundo:</label>
+                                            <select {...register('tipo_world')} className="form-control">
+                                                <option disabled selected value>-- Selecione uma opção --</option>
+                                                <option value={'optPvP'}>PvP-Opcional</option>
+                                                <option value={'pve'}>PvE</option>
+                                                <option value={'retroPvP'}>Retro-PvP</option>
+                                            </select>                    
+                                        </div>
 
-                <div className="row">               
-                {
-                    carregando > 0 ? <div className="spinner-border text-danger mx-auto" role="status"><span className="sr-only">Loading...</span></div>
-                    : <button type="submit" className="btn btn-lg btn-block mt-3 mb-5 btn-cadastro">{props.match.params.id ? 'Atualizar Mundo' : 'Criar Mundo'}</button>
-                }
-                </div>
+                                        <div className="row">               
+                                        {
+                                            carregando > 0 ? <div className="spinner-border text-danger mx-auto" role="status"><span className="sr-only">Loading...</span></div>
+                                            : <button type="submit" className="btn btn-lg btn-block mt-3 mb-5 btn-cadastro">{props.match.params.id ? 'Atualizar Mundo' : 'Criar Mundo'}</button>
+                                        }
+                                        </div>
+                                        
+                                    </form>
+
+                                    <div className="msg-login text-center mt-2">
+                                        {msgTipo === 'sucesso' && <span><strong>WoW!</strong> Mundo Creado &#128526; </span>}
+                                        {msgTipo === 'erro' && <span><strong>Ops!</strong> Não foi possível criar o mundo! &#128546; </span>}               
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            
+
+                </div>		
                 
-            </form>
-
-            <div className="msg-login text-center mt-2">
-                {msgTipo === 'sucesso' && <span><strong>WoW!</strong> Mundo Creado &#128526; </span>}
-                {msgTipo === 'erro' && <span><strong>Ops!</strong> Não foi possível criar o mundo! &#128546; </span>}               
+                 
+                <div id="Footer" className="main-footer">
+                    Copyright by João Vitor Carpes Balardin. All rights reserved.<br></br>
+                    <a href="https://www.tibia.com/abouttibia/?subtopic=aboutcipsoft">About JV</a> | 
+                    <a href="https://www.tibia.com/support/?subtopic=legaldocuments&amp;page=agreement">Service Agreement</a> | 
+                    <a href="https://www.tibia.com/support/?subtopic=legaldocuments&amp;page=privacy">Privacy Policy</a>
+                </div>
             </div>
-        </div>
         </>
     )
 }

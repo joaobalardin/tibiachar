@@ -88,67 +88,102 @@ function CharCadastro(props){
     return(
         <>
         <Navbar/>
-        <div className="col-12 mt-5">
-            <div className="row">
-                <h3 className="mx-auto font-weight-bold">{props.match.params.id ? 'Atualizar Char' : 'Novo Char'}</h3>
-            </div>
+        <div className="main-content Content Talles-Responsividade">
+                <div id="characters" className="Box">
 
-            <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className="Corner-tl" ></div>
+
+                    <div className="Corner-tr" ></div>
+
+                    <div className="Border_1"></div>
+
+                    <div className="BorderTitleText">
+                    </div>
+
+                    <img id="ContentBoxHeadline" className="Title" src="https://static.tibia.com/images/global/strings/headline-characters.gif" alt="Contentbox headline">
+                    </img>
+
+                    <div className="Border_2">
+                        <div className="Border_3">
+                            <div className="BoxContent">
+                                <div className="col-12 mt-5">
+                                    <div className="row">
+                                        <h3 className="mx-auto font-weight-bold">{props.match.params.id ? 'Atualizar Char' : 'Novo Char'}</h3>
+                                    </div>
+
+                                    <form onSubmit={handleSubmit(onSubmit)}>
             
-            <div className="row p-3 ">
-                <h2 className="mx-auto p-5">Chars Criados</h2>
-                <select {...register('world')} className="form-control">
-                <option disabled selected value>-- Selecione uma opção --</option>
-                    {worlds && worlds.map(world => {
-                        return <option value={world.id}>{world.world}</option>
-                    })}
-                </select> 
-            </div>
+                                        <div className="row p-3 ">
+                                            <h2 className="mx-auto p-5">Chars Criados</h2>
+                                            <select {...register('world')} className="form-control">
+                                            <option disabled selected value>-- Selecione uma opção --</option>
+                                                {worlds && worlds.map(world => {
+                                                    return <option value={world.id}>{world.world}</option>
+                                                })}
+                                            </select> 
+                                        </div>
 
-            <div className="form-group">
-                <label>Nick do Char:</label>
-                <input {...register('nick_char')} type="text" className="form-control"/>
-            </div>
+                                        <div className="form-group">
+                                            <label>Nick do Char:</label>
+                                            <input {...register('nick_char')} type="text" className="form-control"/>
+                                        </div>
 
-            <div className="form-group">
-                <label>Level do Char:</label>
-                <input {...register('level_char')} type="text" className="form-control"/>
-            </div>
+                                        <div className="form-group">
+                                            <label>Level do Char:</label>
+                                            <input {...register('level_char')} type="text" className="form-control"/>
+                                        </div>
 
-            <div className="form-group">
-                <label>Classe do Char:</label>
-                <select {...register('classe_char')} className="form-control">
-                    <option disabled selected value>-- Selecione uma opção --</option>
-                    <option value={'druid'}>Druid</option>
-                    <option value={'knight'}>Knight</option>
-                    <option value={'paladin'}>Paladin</option>
-                    <option value={'sorcerer'}>Sorcerer</option>
-                </select>                    
-            </div>
+                                        <div className="form-group">
+                                            <label>Classe do Char:</label>
+                                            <select {...register('classe_char')} className="form-control">
+                                                <option disabled selected value>-- Selecione uma opção --</option>
+                                                <option value={'druid'}>Druid</option>
+                                                <option value={'knight'}>Knight</option>
+                                                <option value={'paladin'}>Paladin</option>
+                                                <option value={'sorcerer'}>Sorcerer</option>
+                                            </select>                    
+                                        </div>
 
-            <div className="form-group">
-                <label>Skill do Char:</label>
-                <input {...register('skill_char')} type="text" className="form-control"/>
-            </div>
+                                        <div className="form-group">
+                                            <label>Skill do Char:</label>
+                                            <input {...register('skill_char')} type="text" className="form-control"/>
+                                        </div>
 
-            <div className="form-group">
-                <label>Dono do Char:</label>
-                <input {...register('dono_char')} type="text" className="form-control"/>
-            </div>
+                                        <div className="form-group">
+                                            <label>Dono do Char:</label>
+                                            <input {...register('dono_char')} type="text" className="form-control"/>
+                                        </div>
 
-            <div className="row">               
-            {
-                carregando > 0 ? <div class="spinner-border text-danger mx-auto" role="status"><span class="sr-only">Loading...</span></div>
-                : <button type="submit" className="btn btn-lg btn-block mt-3 mb-5 btn-cadastro">{props.match.params.id ? 'Atualizar ' : 'Criar Char'}</button>
-            }
-            </div>
-            </form>
+                                        <div className="row">               
+                                        {
+                                            carregando > 0 ? <div class="spinner-border text-danger mx-auto" role="status"><span class="sr-only">Loading...</span></div>
+                                            : <button type="submit" className="btn btn-lg btn-block mt-3 mb-5 btn-cadastro">{props.match.params.id ? 'Atualizar ' : 'Criar Char'}</button>
+                                        }
+                                        </div>
+                                    </form>
 
-            <div className="msg-login text-center mt-2">
-                {msgTipo === 'sucesso' && <span><strong>WoW!</strong> Char Creado &#128526; </span>}
-                {msgTipo === 'erro' && <span><strong>Ops!</strong> Não foi possível criar o Char! &#128546; </span>}               
+                                    <div className="msg-login text-center mt-2">
+                                        {msgTipo === 'sucesso' && <span><strong>WoW!</strong> Char Creado &#128526; </span>}
+                                        {msgTipo === 'erro' && <span><strong>Ops!</strong> Não foi possível criar o Char! &#128546; </span>}               
+                                    </div>                              
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                            
+
+                </div>		
+                
+                 
+                <div id="Footer" className="main-footer">
+
+                    Copyright by João Vitor Carpes Balardin. All rights reserved.<br></br>
+                    <a href="https://www.tibia.com/abouttibia/?subtopic=aboutcipsoft">About JV</a> | 
+                    <a href="https://www.tibia.com/support/?subtopic=legaldocuments&amp;page=agreement">Service Agreement</a> | 
+                    <a href="https://www.tibia.com/support/?subtopic=legaldocuments&amp;page=privacy">Privacy Policy</a>
+
+                </div>
             </div>
-        </div>
         </>
     )
 }
