@@ -1,15 +1,17 @@
 .btn-detalhes{
-    background-color: #614ea6;
-    color: #fff;
+    height: 30px;
+    background-color: #5A2800 !important;
+    color: #fff2db !important;
 }
 
 .btn-detalhes:hover{
-    color: #fff;
+    background-color: #198754 !important;
+    color: #fff2db;
 }
 
 .card-text{
     max-height: 70px;
-    min-height: 70px;
+    min-height: 40px;
     overflow: hidden;
 }
 

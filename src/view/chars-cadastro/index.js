@@ -106,17 +106,17 @@ function CharCadastro(props){
                     <div className="Border_2">
                         <div className="Border_3">
                             <div className="BoxContent">
-                                <div className="col-12 mt-5">
+                                <div className="col-12 mt-3">
                                     <div className="row">
                                         <h3 className="mx-auto font-weight-bold">{props.match.params.id ? 'Atualizar Char' : 'Novo Char'}</h3>
                                     </div>
 
                                     <form onSubmit={handleSubmit(onSubmit)}>
             
-                                        <div className="row p-3 ">
-                                            <h2 className="mx-auto p-5">Chars Criados</h2>
-                                            <select {...register('world')} className="form-control">
-                                            <option disabled selected value>-- Selecione uma opção --</option>
+                                        <div className="row">
+                                            <h5 className="mx-auto pt-3 pb-1">Chars Criados</h5>
+                                            <select {...register('world')} className="form-control styleNewChar">
+                                                <option disabled selected value>-- Selecione uma opção --</option>
                                                 {worlds && worlds.map(world => {
                                                     return <option value={world.id}>{world.world}</option>
                                                 })}
@@ -157,7 +157,7 @@ function CharCadastro(props){
                                         <div className="row">               
                                         {
                                             carregando > 0 ? <div class="spinner-border text-danger mx-auto" role="status"><span class="sr-only">Loading...</span></div>
-                                            : <button type="submit" className="btn btn-lg btn-block mt-3 mb-5 btn-cadastro">{props.match.params.id ? 'Atualizar ' : 'Criar Char'}</button>
+                                            : <button type="submit" className="btn btn-lg btn-block mt-5 mb-5 btn-cadastro">{props.match.params.id ? 'Atualizar ' : 'Criar Char'}</button>
                                         }
                                         </div>
                                     </form>

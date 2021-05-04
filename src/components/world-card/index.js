@@ -12,7 +12,6 @@ function WorldCard({id, worlds, tipo}){
                 <p className="card-text text-justify">
                     {worlds} - {tipo} - <Link to={'/worlddetalhes/' + id} className="btn btn-sm btn-detalhes"> Detalhes</Link> 
                 </p>
-
             </div>
         </div>
     )

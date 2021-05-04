@@ -5,8 +5,8 @@
 }
 
 .box-info{
-    background-color: #614ea6;
-    color: #fff;
+    background-color: white;
+    color: black;
     display: flex;
     display: flex;
     flex-direction: column;
@@ -18,14 +18,53 @@
     position: fixed;
     bottom: 10px;
     right: 10px;
-    color: #f21667;
+    color: #198754;
     transition: .3s ease-in;
 }
 
 .btn-editar i:hover{
-    color: #614ea6;
+    color: #5A2800;
 }
 
 .titulo, .visualiacoes{
-    color: #614ea6;
+    color: #fff2db;
+}
+
+.Corner-tl {
+    background-image:url(https://static.tibia.com/images/global/content/corner-tl.gif);
+}
+
+.Corner-tr {
+    background-image:url(https://static.tibia.com/images/global/content/corner-tr.gif);
+}
+
+.Border_1 {
+    background-image:url(https://static.tibia.com/images/global/content/border-1.gif);
+}
+
+.BorderTitleText {
+    background-image:url(https://static.tibia.com/images/global/content/title-background-green.gif);
+}
+
+.BoxContent {
+    background-image:url(https://static.tibia.com/images/global/content/scroll.gif);
+}
+
+.styleSerch {
+    width: 900px;
+    margin: auto;
+}
+
+.colorworldRow{
+    color: #5A2800 !important;
+}
+
+.box-info {
+    background-image: url(https://static.tibia.com/images/global/content/scroll.gif);
+    background-color: #fff2db !important;
+    font-size: 20px;
+    color: #5A2800 !important;
+    border-style: solid;
+    border-color: #5A2800;
+    border-radius: 10px;
 }

@@ -44,18 +44,18 @@ function Home(props){
                     <div className="BorderTitleText">
                     </div>
 
-                    <img id="ContentBoxHeadline" className="Title" src="https://static.tibia.com/images/global/strings/headline-houses.gif" alt="Contentbox headline">
+                    <img id="ContentBoxHeadline" className="Title" src="https://i.postimg.cc/FKQvsR4h/management.png" alt="Contentbox headline">
                     </img>
 
                     <div className="Border_2">
                         <div className="Border_3">
                             <div className="BoxContent">
-                                    <div className="row p-6 ">
-                                        <h2 className="mx-auto p-5">Mundos Criados</h2>
-                                        <input onChange={(e) => setPesquisa(e.target.value)} type="text" className="form-control text-center" placeholder="Pesquisar Mundo pelo nome..." />
-                                    </div>
-                                    <div className="row p-12">
-                                    <h3>Lista de Mundos:</h3>
+                                <div className="row p-6 ">
+                                    <h3 className="mx-auto pt-3 pb-2">Mundos Criados:</h3>
+                                    <input onChange={(e) => setPesquisa(e.target.value)} type="text" className="form-control text-center styleSerch" placeholder="Pesquisar Mundo pelo nome..." />
+                                </div>
+                                <div className="row pt-3">
+                                    <h5>Lista de Mundos:</h5>
                                     {worlds.map(item => <WorldCard key={item.id} id={item.id} worlds={item.world} tipo={item.tipo} />) }
                                 </div>
                             </div>

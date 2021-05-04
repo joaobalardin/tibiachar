@@ -84,10 +84,10 @@ function MundoCadastro(props){
                     <div className="Border_2">
                         <div className="Border_3">
                             <div className="BoxContent">
-                                <div className="col-12 mt-5">
+                                <div className="col-12 mt-3 ">
 
                                     <div className="row-nav">
-                                        <h3 className="mx-auto font-weight-bold">{props.match.params.id ? 'Atualizar Mundo' : 'Novo Mundo'}</h3>
+                                        <h3 className="mx-auto font-weight-bold colotNewWorld">{props.match.params.id ? 'Atualizar Mundo' : 'Novo Mundo'}</h3>
                                     </div>
 
                                     <form onSubmit={handleSubmit(onSubmit)}>
@@ -110,8 +110,8 @@ function MundoCadastro(props){
 
                                         <div className="row">               
                                         {
-                                            carregando > 0 ? <div className="spinner-border text-danger mx-auto" role="status"><span className="sr-only">Loading...</span></div>
-                                            : <button type="submit" className="btn btn-lg btn-block mt-3 mb-5 btn-cadastro">{props.match.params.id ? 'Atualizar Mundo' : 'Criar Mundo'}</button>
+                                            carregando > 0 ? <div className="spinner-border text-danger mx-auto mt-2" role="status"><span className="sr-only">Loading...</span></div>
+                                            : <button type="submit" className="btn btn-lg btn-block mt-5 mb-5 btn-cadastro">{props.match.params.id ? 'Atualizar Mundo' : 'Criar Mundo'}</button>
                                         }
                                         </div>
                                         
